@@ -1,0 +1,389 @@
+.crmContainer{
+  max-width: 1200px;
+  min-width: 800px;
+}
+
+.crm .awards{
+  min-width: 700px;
+}
+
+.crm .awardsContainer{
+  overflow: auto;
+}
+
+/* Time selector */
+
+@media (min-width: 768px){
+    .form-group .timeSelector .date{
+        width: 47.5%;
+    }
+
+    .form-group .timeSelector .date:first-child{
+        padding-right: 2%;
+    }
+
+    .form-group .timeSelector .date:last-child{
+        padding-left: 2%;
+    }
+
+    .form-group .timeSelector .spacer{
+        width: 5%;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* Popup */
+
+.selectColumn .checkbox {
+  margin-right: 10px;
+}
+
+/* Overwrite Pagination */
+
+.pagination li a
+{
+  color: #05c298;
+}
+
+
+.pagination .active a,
+.pagination .active a:focus,
+.pagination .active a:hover
+{
+  background: #05c298;
+  border: 1px solid #05c298;
+}
+
+.pagination{
+  float: right;
+  margin-right: 40px;
+}
+
+/* Overwrite datamagager.css */
+
+.data-manage-list table tr th,
+.data-manage-list table tr td{
+    border-bottom: none;
+    line-height: 45px;
+    padding: 0 10px;
+}
+
+
+/* */
+/* From datamagager.css */
+/* */
+
+.data-manage,
+.data-manage input,
+.data-manage select, .data-manage option {
+    font-size: 12px;
+    font-family: "Î¢ÈíÑÅºÚ";
+    color: #666;
+}
+.data-manage .select,
+.data-manage .button {
+    padding: 0 8px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #dddddd;
+    background-color: #fff;
+    border-radius: 2px;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: auto;
+    height: auto;
+    display: inline-block;
+}
+.data-manage .select {
+    padding: 0;
+    height: 28px;
+    line-height: 28px;
+}
+
+.data-manage .select:hover {
+    border-color: #05c29a;
+    color: #05c29a;
+}
+.data-manage .button {
+    color: #666;
+    text-decoration: none;
+}
+.data-manage .button:hover {
+    border-color: #05c29a;
+    background-color: #06c39d;
+    color: #fff;
+}
+.data-manage .button-plain {
+    border: none;
+    background: transparent;
+    color: #05c29a;
+    margin-right: 0;
+}
+.data-manage .button-primary {
+    border: none;
+    background: #05c29a;
+    color: #fff;
+    margin-right: 0;
+}
+.data-manage .button-primary-width {
+    border: none;
+    background: #05c29a;
+    color: #fff;
+    margin-right: 0;
+    width: 80px;
+    margin-left: 58px;
+}
+.data-manage .search-div{
+    margin-top:15px;
+}
+.data-manage .icon {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: url(../images/data-manage-icons.png) no-repeat 0 0;
+    vertical-align: middle;
+}
+.data-manage .icon-dropdown {
+    background-position: 0 0;
+}
+.data-manage .icon-setting {
+    width: 16px;
+    height: 16px;
+    background-position: -20px 0;
+}
+.data-manage .icon-setting:hover {
+    background-position: -20px -20px;
+}
+.data-manage-page {
+    padding: 12px 40px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e4e4e4;
+}
+.data-manage-page label {
+    font-size: 14px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.data-manage-control {
+    position: relative;
+    padding: 12px 40px;
+}
+.data-manage-control .link-filter {
+    display: inline-block;
+    color: #666;
+    text-decoration: none;
+    margin-left: 20px;
+    vertical-align: middle;
+    padding: 10px;
+}
+.data-manage-control .link-filter:hover {
+    color: #05c29a;
+    margin-left: 20px;
+}
+.data-manage-control .link-filter:hover .icon-dropdown {
+    background-position: 0 -20px;
+}
+.data-manage-control .link-setting {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+}
+
+.data-manage-control .search-button{
+    width:80px; 
+    background: #06c29c;
+    color: #fff;
+}
+
+.data-manage-list table {
+    width: 100%;
+    border-top: 1px solid #ededed;
+}
+.data-manage-list table th {
+    background-color: #f5f5f5;
+}
+.data-manage-list table tr {
+    border-bottom: 1px solid #ededed;
+}
+.data-manage-list table tr:hover {
+    background-color: #f1fffd;
+}
+.data-manage-list table .tr-noHover:hover {
+    background-color: #ffffff;
+}
+.data-manage-list table th,
+.data-manage-list table td {
+    height: 45px;
+    padding: 0 10px;
+    font-weight: normal;
+}
+.data-manage-list table th:first-child,
+.data-manage-list table td:first-child {
+    padding-left: 10px;
+}
+.data-manage-list table th:last-child,
+.data-manage-list table td:last-child {
+    padding-right: 10px;
+}
+
+.data-manage-list table .no-record{
+    text-align: center;
+    height: 150px;
+    vertical-align: middle;
+}
+
+
+#data-pagination {
+    padding: 30px 40px;
+}
+#data-pagination .g_page_bootstrap a {
+    vertical-align: middle;
+    color: #05c298;
+}
+#data-pagination .g_page_bootstrap .g_page_cur {
+    background: #05c298;
+    color: #fff;
+    font-weight: normal;
+}
+
+.inline_input{
+    width: 160px;
+    margin: auto 5px;
+    display: inline-block;
+}
+.setting_icon{
+    background-image: url(../images/controls/setting-icon.png);
+    background-position: 0 0;
+    width: 21px;
+    height: 19px;
+    position: absolute;top:9px;left:6px
+}
+.setting-group .field{
+    display: inline-block;
+    margin: 0 10px 0 10px;
+    color: #999999;
+}
+.data-manage #fieldShow .icon-setting-color {
+    background-position: -20px -20px;
+    margin-right: 10px;
+}
+.data-manage #fieldShow form .checkbox {
+    display: inline-block;
+    margin-right: 20px;
+}
+.data-manage #select-tab form{
+    overflow: hidden;
+    padding-top: 20px;
+}
+.data-manage #select-tab form label{
+    font-weight: normal;
+}
+.data-manage #listStatus{
+    width: 120px;
+}
+/*ÉèÖÃ*/
+.data-manage .checkbox{
+    margin: 0;
+}
+.data-manage .checkbox span{
+    color: #666;
+}
+
+.popupWindow{
+    z-index: 1000000001; position: fixed; width: 420px; height: 164px; top: 100px; left: 50%;margin-left: -210px;
+    font-family: "Microsoft Yahei", "Î¢ÈíÑÅºÚ", Tahoma, Arial, sans-serif;
+ }
+ .popupWindow .pop-window{
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    position: relative;
+    width: inherit;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.3); 
+    outline: 0;
+    background-clip: padding-box;
+ }
+ .popupWindow .pop-content{
+    border:0;
+    width: inherit;
+    height: inherit;
+ }
+ .popupWindow .pop-content .pop-header{
+    padding: 10px;background-color: #F5FAF6;
+ }
+ .popupWindow .pop-content .s-icon{
+    top: 11px;left: 20px;
+ }
+ .popupWindow .pop-content .title{
+    font-weight: bold;margin-left:36px;font-size:16px;
+ }
+ .popupWindow .pop-content .pop-body{
+    max-height:inherit;margin-top: 0;padding: 15px;overflow-y:auto;
+ }
+ .popupWindow .pop-content .pop-body .pop-txt{
+    font-size: 16px;
+    color: #888;
+    padding: 15px 10px;
+ }
+.popupWindow .close-green:hover {
+    opacity: 1;
+    /* background: #56bb23; */
+    background: red;
+}
+.popupWindow  .close {
+    margin-top: 2px;
+    margin-right: 8px;
+}
+.popupWindow .close-green {
+    /* padding-right: 1px; */
+    background: #D2D2D2;
+    border-radius: 20px;
+    width: 19px;
+    height: 19px;
+    color: #fff;
+    opacity: 0.6;
+    text-shadow: 0 0 0;
+    font-size: 17px;
+}
+.popupWindow  .btn {
+    padding: 5px 20px;
+    margin-right: 15px;
+    color: #666;
+    background-color: #f5f5f5;
+    text-shadow: 0 0 0;
+    background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #ccc;
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    float: right;
+}
+
+.defaults-height{
+    height: 150px;
+}
+/*tab±êÇ©Ò³*/
+.data-manage-page-head {
+    padding: 12px 40px;
+    height: 55px;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    border-bottom: 1px solid #e4e4e4;
+}
+.nav-tabs>li>a{
+    cursor: pointer;
+}
+.nav-tabs>li.active>a,.nav-tabs>li.active>a:hover{
+    border-top: 2px solid #06c29c;
+}
+

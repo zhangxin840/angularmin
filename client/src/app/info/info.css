@@ -1,0 +1,32 @@
+.appInfoContainer{
+}
+.appInfo .pictureSet{
+  position: relative;
+  overflow: visible;
+}
+
+.appInfo .pictureSet .deleteSet{
+  display: block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.appInfo .pictureSet .imagePreviews{
+  margin-top: 12px;
+}
+
+@media (min-width: 450px) {
+  .appInfoContainer{
+    padding-right: 30px; /* For delete icon */
+  }
+
+  .appInfo .pictureSet .deleteSet {
+    right: -20px;
+    top: 10px;
+  }
+}
+

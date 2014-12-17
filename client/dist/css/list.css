@@ -1,0 +1,42 @@
+.appListContainer{
+
+}
+
+.appList .topBar{
+  margin-bottom: 20px
+}
+
+.appList .topBar .mainTitle{
+  float: left;
+  margin: 0;
+  line-height: 34px;
+}
+
+.appList .topBar .newAct{
+  float: right;
+}
+
+.appList .infoSection:not(:last-of-type){
+  margin-bottom: 15px;
+}
+
+.appList .infoSection:last-of-type{
+  /* margin-top: -10px; */
+}
+
+.appList strong{
+  min-width: 60px;
+  display: inline-block;
+}
+
+.appList .panel{
+  margin: 25px 0 25px 0;
+}
+
+.appList .newAct{
+  margin-bottom: 20px;
+}
+
+.appList .functionPanel a{
+  margin: 0 3px;
+}

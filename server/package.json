@@ -1,0 +1,9 @@
+{
+  "name": "mock-sever",
+  "version": "0.0.1",
+  "description": "Mock backend for web projects",
+  "dependencies": {
+    "express": "~4.7.4",
+    "open": "0.0.5"
+  }
+}

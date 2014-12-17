@@ -1,0 +1,101 @@
+<div class="mainContainer crmContainer crm ">
+  <div class="crmSection ">
+    <div class="data-manage">
+    <!--
+      <h1 class="mainTitle">中奖名单</h1> 
+    -->
+    <div class="data-manage-control">
+      <a class="button" ng-href="{{exportUrl}}" target="_blank">导出</a>
+      <a href="javascript:;" class="button" ng-click="search(true)">刷新</a>
+      <a href="javascript:;" class="link-filter" ng-click="isShowSearchForm = !isShowSearchForm">筛选 <i class="icon icon-dropdown"></i></a>
+      <div class="animate-show" id="select-tab" ng-show="isShowSearchForm">
+        <form class="form-horizontal container-fluid" role="form">
+          <div class="row">
+            <div class="form-group col-sm-6">
+              <label for="name" class="control-label col-sm-3">姓名</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="name" ng-model="searchObj.name">
+              </div>
+            </div>
+            <div class="form-group col-sm-6">
+              <label for="phone" class="control-label col-sm-3">联系电话</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="phone" ng-model="searchObj.phone">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-sm-6">
+              <label for="start" class="control-label col-sm-3">中奖时间</label>
+              <div class="col-sm-9">
+                <div class="row timeSelector">
+                  <div class="col-sm-5 date">
+                    <input type="text" fl-datetimepicker class="form-control" id="start" name="start" placeholder="" ng-model="searchObj.start">
+                  </div>
+                  <label for="end" class="control-label col-sm-2 spacer">至</label>
+                  <div class="col-sm-5 date">
+                    <input type="text" fl-datetimepicker class="form-control" id="end" name="end" placeholder="" ng-model="searchObj.end">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-sm-6">
+              <label for="award" class="control-label col-sm-3">奖品类型</label>
+              <div class="col-sm-9">
+                <select class="form-control" ng-model="searchObj.award" ng-options="award.FAwardId as award.FName for award in awardsInfo"></select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-sm-6">
+              <label for="" class="control-label col-sm-3"></label>
+              <div class="col-sm-9">
+                <button type="button" class="btn search-button" ng-click="search(true)">搜索
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <a href="javascript:;" ng-click="showSelectColumn()" class="link-setting"><i class="icon icon-setting"></i></a>
+    </div>
+    <div class="awardList data-manage-list">
+      <div class="awardsContainer">
+        <table class="awards table" cg-busy="requestPromise">
+          <thead>
+            <tr>
+              <th ng-show="columns.FUserID" class="">ID</th>
+              <th ng-show="columns.FRegQQ">QQ</th>
+              <th ng-show="columns.FName">姓名</th>
+              <th ng-show="columns.FAwardName">奖品名称</th>
+              <th ng-show="columns.FMobile">手机号码</th>
+              <th ng-show="columns.FLottoTime">中奖时间</th>
+              <th ng-show="columns.FAddr">邮寄地址</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="8" class="no-record" ng-hide="awards.length > 0">暂无符合条件记录</td>
+            </tr>
+            <tr ng-repeat="award in awards" class="animate-repeat">
+              <td ng-show="columns.FUserID">{{award.FUserID}}</td>
+              <td ng-show="columns.FRegQQ">{{award.FRegQQ}}</td>
+              <td ng-show="columns.FName">{{award.FName}}</td>
+              <td ng-show="columns.FAwardName">{{award.FAwardName}}</td>
+              <td ng-show="columns.FMobile">{{award.FMobile}}</td>
+              <td ng-show="columns.FLottoTime">{{award.FLottoTime}}</td>
+              <td ng-show="columns.FAddr">{{award.FAddr}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <pagination class="pagination-sm" ng-model="page.currentPage" ng-show="numPages > 1" items-per-page="page.itemsPerPage" total-items="page.totalItems" max-size="page.maxSize" boundary-links="true" rotate="false" num-pages="numPages" direction-links="false" first-text="<<" last-text=">>" ng-change="pageChanged()"></pagination>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crmSection hide">
+  <div class="">
+    <h1 class="mainTitle">活动数据</h1>
+  </div>
+</div>
+</div>

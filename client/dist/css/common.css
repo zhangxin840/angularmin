@@ -1,0 +1,97 @@
+/* Common */
+body {
+  font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+  background: none;
+}
+html,
+body {
+  height: 100%;
+}
+.mainTitle {
+  text-align: left;
+  font-size: 24px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.flIcon {
+  display: inline-block;
+  background: url("../img/weiappIcons.png");
+  vertical-align: middle;
+}
+.flIcon.small {
+  width: 12px;
+  height: 12px;
+}
+.flIcon.middle {
+  width: 15px;
+  height: 15px;
+}
+.flIcon.dustbin {
+  background-position: -40px -20px;
+}
+.flIcon.question {
+  background-position: -15px 0px;
+}
+/* For AngularJS ng-cloak */
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak,
+.ng-hide {
+  display: none !important;
+}
+/* For AngularJS form validation */
+input.ng-invalid,
+textarea.ng-invalid,
+select.ng-invalid {
+  color: #b94a48;
+  border-color: #ee5f5b;
+}
+input.ng-invalid:focus,
+textarea.ng-invalid:focus,
+select.ng-invalid:focus {
+  border-color: #e9322d;
+  box-shadow: 0 0 6px #f8b9b7;
+}
+.errorMessage {
+  color: #a94442;
+}
+/* For AngularJS ng-view animation */
+.animate-view.ng-enter,
+.animate-view.ng-leave {
+  -webkit-transition: 0.2s linear all;
+          transition: 0.2s linear all;
+}
+.animate-view.ng-enter {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.animate-view.ng-enter,
+.animate-view.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+.animate-view.ng-leave,
+.animate-view.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+/* For AngularJS ng-show animation */
+.animate-show {
+  opacity: 1;
+  -webkit-transition: all linear 0.3s;
+          transition: all linear 0.3s;
+}
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove {
+  display: block!important;
+}
+.animate-show.ng-hide {
+  opacity: 0;
+}
+/* For AngularJS ng-repeat animation */
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  -webkit-transition: none;
+          transition: none;
+}

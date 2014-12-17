@@ -1,0 +1,23 @@
+/* Overwrite bootstrap */
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 10% auto;
+  }
+}
+
+/* Overwrite angular busy*/
+
+.cg-busy-default-sign {
+  top: 40%;
+  left: 50%;
+  position: absolute;
+  margin-top: -24px;
+  margin-left: -82px;
+  width: 165px;
+
+  border-radius: 7px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}

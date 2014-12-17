@@ -1,0 +1,37 @@
+<div class="mainContainer appListContainer container-fluid" cg-busy="requestPromise">
+  <div class="appList">
+    <div class="topBar clearfix">
+      <h1 class="mainTitle">应用列表</h1>
+      <div class="newAct">
+        <button ng-click="addAct()" class="btn btn-info">创建新应用</button>
+      </div>
+    </div>
+    <div class="alert alert-info" ng-show="!(apps && apps.length > 0)">暂无应用</div>
+    <div class="panel panel-default repeat-item" ng-repeat="appInfo in apps | orderBy: '-id'">
+      <div class="panel-heading clearfix">
+        {{appInfo.FData.FTitle}}
+        <div class="functionPanel pull-right">
+          <a href="javascript:;" ng-click="auditAct(appInfo.id)">发布</a> 
+          <a ng-href="#/edit/{{appInfo.id}}">详情</a>
+          <a ng-href="#/crm/{{appInfo.id}}">数据</a>
+          <a href="javascript:;" ng-click="deleteAct(appInfo.id)">删除</a>
+        </div>
+      </div>
+      <div class="panel-body container-fluid">
+        <div class="infoSection row">
+          <div class="col-xs-4"><strong>状态</strong></div>
+          <div class="col-xs-8">
+            <span class="label label-warning">{{appInfo.FStatus | auditStatusText}}</span>
+          </div>
+        </div>
+        <div class="infoSection row">
+          <div class="col-xs-4"><strong>访问地址</strong></div>
+          <div class="col-xs-8">
+            <a class="hidden-xs" target="_blank" ng-href="{{appInfo.FUrl}}">{{appInfo.FUrl}}</a>
+            <a class="visible-xs" target="_blank" ng-href="{{appInfo.FUrl}}">链接</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

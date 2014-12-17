@@ -1,0 +1,78 @@
+<div class="mainContainer appInfoContainer container-fluid" cg-busy="requestPromise">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="mainTitle hide">应用信息</h1>
+      <div class="alert alert-info" ng-show="!editInfo">未找到该应用</div>
+      <form name="mainForm" class="appInfo flEditForm" novalidate ng-show="editInfo">
+        <fieldset>
+          <legend>
+            <span class="main">相册设置</span>
+          </legend>
+          <div class="multiSection">
+            <div class="section" ng-repeat="album in editInfo.FAlbums">
+              <p class="sectionTitle">
+                <strong>相册{{$index + 1 | chineseNumber}}</strong>
+                <i class="flIcon middle dustbin deleteSection" ng-show="editInfo.FAlbums.length > 1"
+                   ng-click="removeItem(editInfo.FAlbums, album)"></i>
+              </p>
+              <div class="form-group">
+                <label for=""><i class="requiredMark">*</i>相册名称</label>
+                <div class="controls">
+                  <input type="text" class="form-control" id="" name="FName" placeholder="请输入相册名称"
+                         required maxlength="4" ng-model="album.FName">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for=""><i class="requiredMark">*</i>相册描述</label>
+                <div class="controls">
+                  <input type="text" class="form-control" id="" name="FDescription"
+                         placeholder="请输入相册描述" required maxlength="20" ng-model="album.FDescription">
+                </div>
+              </div>
+              <div class="form-group pictureSet" ng-repeat="pictureSet in album.FPictureSets">
+                <label for=""><i class="requiredMark">*</i>图片集{{$index + 1}}</label>
+                <i class="flIcon small delete deleteSet" ng-show="album.FPictureSets.length > 4"
+                   ng-click="removeItem(album.FPictureSets, pictureSet)"></i>
+                <div class="controls">
+                  <input type="text" class="form-control" id="" name="FName" placeholder="请输入图片集名称"
+                         required maxlength="6" ng-model="pictureSet.FName">
+                </div>
+                <div class="controls">
+                  <div class="imagePreviews">
+                    <div class="imagePreview"
+                         ng-repeat="pictureUrl in pictureSet.FPictures track by $index">
+                      <div class="inner"
+                           ng-style="{'background-image': 'url(' + (pictureUrl) + randomQuery + ')'}"></div>
+                      <i class="flIcon small delete deleteImage"
+                         ng-click="removeItem(pictureSet.FPictures, pictureUrl)"></i>
+                    </div>
+                  </div>
+                  <div class="uploader">
+                    <p class="help">请上传1-10张图片，大小100K以内</p>
+                    <input type="file" class="form-control" ng-model="pictureSet.uploaded"
+                           fl-image-upload fl-on-success="onUploadSuccess">
+                    <p class="errorMessage animate-show help-block"
+                       ng-hide="(!pictureSet.uploaded) || pictureSet.isImagesValid">请上传1-10张图片</p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="controls">
+                  <a class="addSection clearLink" ng-click="addSet(album)" ng-show="album.FPictureSets.length < 6">+
+                    添加图片集 <span class="help">(可设置4-6个图片集)</span></a>
+                </div>
+              </div>
+            </div>
+            <a class="addSection clearLink" ng-click="addSection()" ng-show="editInfo.FAlbums.length < 10">+
+              添加相册 <span class="help">(可设置1-10个相册)</span></a>
+          </div>
+        </fieldset>
+        <div class="formFooter">
+          <button class="btn btn-default" ng-click="cancel()">取消</button>
+          <!-- <button class="btn btn-success" ng-click="submit()" ng-disabled="mainForm.$invalid">保存</button> -->
+          <button class="btn btn-success" ng-click="submit()">保存</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

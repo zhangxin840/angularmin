@@ -1,0 +1,12 @@
+ <div class="modal-header">
+    <h3 class="modal-title">{{title}}</h3>
+ </div>
+ <div class="modal-body">
+  {{content}}
+ </div>
+ <div class="modal-footer" ng-show="!isNotify">
+    <button class="btn btn-primary" ng-click="ok()">确认</button>
+    <button class="btn btn-default" ng-show="isDialog" ng-click="cancel()">取消</button>
+ </div>
+
+ 

@@ -1,0 +1,44 @@
+/* Under construction */
+
+.construction {
+  width: 300px;
+  display: block;
+  margin: 20px auto;
+}
+
+.construction img {
+  float: left;
+  width: 128px;
+  height: 128px;
+}
+
+.construction .tips {
+  margin: 30px 0 0 150px;
+}
+
+.construction .tips strong {
+  font-size: 22px;
+  color: #999;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Container */
+
+.mainContainer {
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+/* For theme alignLeft */
+.alignLeft .mainContainer {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* For theme wide */
+.wide .mainContainer {
+  min-width: 700px;
+}

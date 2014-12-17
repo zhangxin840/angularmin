@@ -1,0 +1,42 @@
+<div class="mainContainer crmContainer crm container-fluid">
+  <div class="crmSection row">
+    <div class="col-md-12">
+      <h1 class="mainTitle">中奖名单</h1>
+      <div class="alert alert-info" ng-show="!awards">暂无中奖信息</div>
+      <div class="awardList" ng-show="awards">
+        <div>
+          <a class="btn btn-info" ng-href="{{exportUrl}}" target="_blank">导出Excel</a>
+        </div>
+        <div class="awardsContainer">
+          <table class="awards table">
+            <thead>
+              <tr>
+                <th class="">ID</th>
+                <th>QQ</th>
+                <th>姓名</th>
+                <th>名称</th>
+                <th>手机号码</th>
+                <th>邮寄地址</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="award in awards">
+                <td class="" ng-model="award.FUserID">{{award.FUserID}}</td>
+                <td ng-model="award.FRegQQ">{{award.FRegQQ}}</td>
+                <td ng-model="award.FName">{{award.FName}}</td>
+                <td ng-model="award.FAwardName">{{award.FAwardName}}</td>
+                <td ng-model="award.FMobile">{{award.FMobile}}</td>
+                <td ng-model="award.FAddr">{{award.FAddr}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="crmSection row hide">
+    <div class="col-md-12">
+      <h1 class="mainTitle">活动数据</h1>
+    </div>
+  </div>
+</div>

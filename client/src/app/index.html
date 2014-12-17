@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ch">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <base href=""/>
+    <title>AngularMin</title>
+    <!-- fileblock:js head -->
+    <!-- endfileblock -->
+    <!-- fileblock:css css -->
+    <!-- endfileblock -->
+  </head>
+  <body>
+    <main ng-app="flApps" class="">
+      <div class="{{configs.theme}}" ng-controller="ContainerCtrl">
+        <div ng-include="'partials/construction.tpl.html'">
+        </div>
+        <div class="animate-view" ng-view>
+        </div>
+      </div>
+      <div class="">
+        <div ng-include="'partials/configs.tpl.html'">
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript">
+      // document.domain = 'qq.com';
+      // window.flConfigs = window.flConfigs || {
+      // };
+      // window.flConfigs.flGrade = null;
+    </script>
+    <!-- fileblock:js js -->
+    <!-- endfileblock -->
+  </body>
+</html>
