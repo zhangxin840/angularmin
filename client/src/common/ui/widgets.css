@@ -7,6 +7,12 @@
   }
 }
 
+/* Overwrite jQuery UI */
+.ui-datepicker{
+  z-index: 2 !important;
+}
+
+
 /* Overwrite angular busy*/
 
 .cg-busy-default-sign {

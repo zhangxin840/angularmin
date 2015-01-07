@@ -27,13 +27,16 @@ angular.module('services.remote', ['base', 'ui.widgets', 'configs'])
     // Append request data
     helpers.deepExtend(data, configs.appendRequest);
 
-    // Pass data as params when method in get
+    // Pass data as params when method is get
     requestConfig.method = requestConfig.method || "GET";
     if(requestConfig.method.toUpperCase() === "GET"){
+      if(!requestConfig.params){
+        requestConfig.params = helpers.deepExtend({}, requestConfig.data);
+      }
       helpers.deepExtend(requestConfig.params, data);
     }
     else{
-      requestConfig.data  = requestConfig.data || {}
+      requestConfig.data  = requestConfig.data || {};
       helpers.deepExtend(requestConfig.data, data);
     }
 
@@ -47,15 +50,15 @@ angular.module('services.remote', ['base', 'ui.widgets', 'configs'])
     $http(requestConfig).success(function(data, status, headers, config) {
       var errorMessage = "";
 
-      if (data.ret === 0 || data.code === 0) {
+      if (data.ret === 0 || data.code === 0 || data.errorcode === 0) {
         deferred.resolve(data.data);
       } else {
         if(configs.isDevMode){
           errorMessage += requestConfig.url + " 接口异常";
           errorMessage += ' ';
-          errorMessage += ("服务器消息：" + data.msg);
+          errorMessage += "服务器消息：" + (data.msg || data.errmsg);
         }else{
-          errorMessage += ("提示：" + data.msg);
+          errorMessage += "提示：" + (data.msg || data.errmsg);
         }
 
         deferred.reject(config);
