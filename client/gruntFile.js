@@ -22,9 +22,8 @@ module.exports = function (grunt) {
 
   // configure the tasks
   grunt.initConfig({
-    // distdir: 'D:\\Codes\\addev.com_631007158\\addev.com_631007158\\src\\web',
     distdir: 'dist',
-    releasedir: 'D:\\Codes\\addev.com_631007158\\addev.com_631007158\\src\\web',
+    // releasedir: 'D:\\Codes\\addev.com_631007158\\addev.com_631007158\\src\\web',
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*!\n<%= pkg.name %> - v<%= pkg.version %> - ' +
       '<%= grunt.template.today("yyyy-mm-dd") %> ' +
@@ -365,7 +364,7 @@ module.exports = function (grunt) {
         options: {
           server: {
             baseDir: "<%= distdir %>"
-          },
+          }
         }
       }
     }
@@ -418,7 +417,7 @@ module.exports = function (grunt) {
     'Minimize resources usage and copy to release directory.',
     [
       'build',
-      'test',
+      // 'test',
       'ngmin',
       'uglify',
       'cssmin',
@@ -432,6 +431,6 @@ module.exports = function (grunt) {
   grunt.registerTask(
     'default',
     'Watches the project for changes, automatically builds them and runs a server.',
-    [ 'build', 'browserSync', 'watch' ]
+    [ 'build', 'watch' /*,'browserSync'*/]
   );
 };
